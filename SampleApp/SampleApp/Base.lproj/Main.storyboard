@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wCe-dC-u2B">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="vju-SM-o1P">
+            <objects>
+                <viewController id="mBO-7u-CHk" customClass="ViewController" customModule="MobiCloud" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zFf-Qi-bKu"/>
+                        <viewControllerLayoutGuide type="bottom" id="kXs-8f-J4o"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7RK-Tx-SVW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroung.png" translatesAutoresizingMaskIntoConstraints="NO" id="RV8-lz-Qj7"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="209" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WZi-oq-ZGy">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LoginTVCell" rowHeight="307" id="FA8-p8-lwS" customClass="LoginTVCell" customModule="MobiCloud" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="307"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FA8-p8-lwS" id="uIV-AR-k6K">
+                                            <frame key="frameInset" width="375" height="307"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="ggD-Z3-feg">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="FNi-gs-vVR"/>
+                                                        <constraint firstAttribute="height" constant="140" id="Wol-LE-QFH"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="YeK-cV-oMO">
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="OMW-YX-Cn1"/>
+                                                    </constraints>
+                                                    <segments>
+                                                        <segment title="Signup"/>
+                                                        <segment title="Login"/>
+                                                    </segments>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <connections>
+                                                        <action selector="segmentControlValueChanged:" destination="FA8-p8-lwS" eventType="valueChanged" id="Eal-2x-npj"/>
+                                                    </connections>
+                                                </segmentedControl>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="YeK-cV-oMO" secondAttribute="trailing" constant="20" id="F3L-66-bFz"/>
+                                                <constraint firstItem="ggD-Z3-feg" firstAttribute="top" secondItem="uIV-AR-k6K" secondAttribute="topMargin" constant="22" id="THU-mu-zqT"/>
+                                                <constraint firstItem="YeK-cV-oMO" firstAttribute="top" secondItem="ggD-Z3-feg" secondAttribute="bottom" constant="40" id="ZGD-kT-mrI"/>
+                                                <constraint firstItem="ggD-Z3-feg" firstAttribute="centerX" secondItem="uIV-AR-k6K" secondAttribute="centerX" id="swJ-Kc-yrI"/>
+                                                <constraint firstItem="YeK-cV-oMO" firstAttribute="leading" secondItem="uIV-AR-k6K" secondAttribute="leadingMargin" constant="20" id="xbY-rX-7HX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="segmentControl" destination="YeK-cV-oMO" id="q2z-Y7-GuK"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TextFieldTVCell" rowHeight="63" id="W4G-LJ-iPA" customClass="TextFieldTVCell" customModule="MobiCloud" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="335" width="375" height="63"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="W4G-LJ-iPA" id="Lhg-Qa-rCc">
+                                            <frame key="frameInset" width="375" height="63"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iR2-FM-7Vo">
+                                                    <subviews>
+                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6sa-C2-Rvs">
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="Yn3-5n-1hh"/>
+                                                            </constraints>
+                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="6sa-C2-Rvs" secondAttribute="trailing" constant="8" id="C6V-lt-9LI"/>
+                                                        <constraint firstItem="6sa-C2-Rvs" firstAttribute="top" secondItem="iR2-FM-7Vo" secondAttribute="top" id="Rmh-DL-hLz"/>
+                                                        <constraint firstAttribute="height" constant="40" id="VoE-8L-nNg"/>
+                                                        <constraint firstItem="6sa-C2-Rvs" firstAttribute="leading" secondItem="iR2-FM-7Vo" secondAttribute="leading" constant="8" id="nGH-x1-RUS"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="iR2-FM-7Vo" firstAttribute="leading" secondItem="Lhg-Qa-rCc" secondAttribute="leadingMargin" constant="20" id="Lcn-bx-d4w"/>
+                                                <constraint firstItem="iR2-FM-7Vo" firstAttribute="top" secondItem="Lhg-Qa-rCc" secondAttribute="topMargin" constant="2" id="UDm-Ag-twm"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="iR2-FM-7Vo" secondAttribute="trailing" constant="20" id="xkh-rM-Qig"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="textField" destination="6sa-C2-Rvs" id="8rH-Uw-1Py"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SubmitTVCell" rowHeight="91" id="0L2-M8-L0K" customClass="LoginTVCell" customModule="MobiCloud" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="398" width="375" height="91"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0L2-M8-L0K" id="iWz-vA-KKD">
+                                            <frame key="frameInset" width="375" height="91"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1kW-TM-rfZ">
+                                                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="oUS-P1-vgL"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Login">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="submitBtnClicked:" destination="0L2-M8-L0K" eventType="touchUpInside" id="8PK-eb-Pn7"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1kW-TM-rfZ" firstAttribute="top" secondItem="iWz-vA-KKD" secondAttribute="topMargin" constant="2" id="VLd-bS-2uN"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="1kW-TM-rfZ" secondAttribute="trailing" constant="20" id="fyK-FP-QsM"/>
+                                                <constraint firstItem="1kW-TM-rfZ" firstAttribute="leading" secondItem="iWz-vA-KKD" secondAttribute="leadingMargin" constant="20" id="vh3-ei-J1Z"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="submitBtn" destination="1kW-TM-rfZ" id="jqK-2X-Uex"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="mBO-7u-CHk" id="WC2-BX-TdC"/>
+                                    <outlet property="delegate" destination="mBO-7u-CHk" id="6FG-mO-Qsb"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WZi-oq-ZGy" firstAttribute="top" secondItem="7RK-Tx-SVW" secondAttribute="top" id="6NW-hC-rsB"/>
+                            <constraint firstItem="RV8-lz-Qj7" firstAttribute="leading" secondItem="7RK-Tx-SVW" secondAttribute="leading" id="CJM-Rq-q3C"/>
+                            <constraint firstItem="kXs-8f-J4o" firstAttribute="top" secondItem="RV8-lz-Qj7" secondAttribute="bottom" id="W81-2h-da2"/>
+                            <constraint firstAttribute="trailing" secondItem="RV8-lz-Qj7" secondAttribute="trailing" id="aua-0A-YII"/>
+                            <constraint firstItem="kXs-8f-J4o" firstAttribute="top" secondItem="WZi-oq-ZGy" secondAttribute="bottom" id="g03-M4-bA2"/>
+                            <constraint firstAttribute="trailing" secondItem="WZi-oq-ZGy" secondAttribute="trailing" id="j76-X3-5cG"/>
+                            <constraint firstItem="WZi-oq-ZGy" firstAttribute="leading" secondItem="7RK-Tx-SVW" secondAttribute="leading" id="qWm-k8-6Oe"/>
+                            <constraint firstItem="RV8-lz-Qj7" firstAttribute="top" secondItem="7RK-Tx-SVW" secondAttribute="top" id="wLd-3f-H2L"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="98l-0c-GcK"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="WZi-oq-ZGy" id="ln6-EN-qny"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WvW-DY-Boi" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2004" y="131.78410794602701"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="xkm-gy-4O0">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MDx-cc-AhK" customClass="MainViewController" customModule="MobiCloud" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fod-Vy-Kpn"/>
+                        <viewControllerLayoutGuide type="bottom" id="bdr-VK-Hgj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bp6-cp-ThT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AppsPicket" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXk-sP-6Xr">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="Pgy-ad-wvU"/>
+                                    <constraint firstAttribute="width" constant="217" id="cZ0-wR-wr8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIQ-IN-1te">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="7dj-4s-Y0t"/>
+                                    <constraint firstAttribute="width" constant="217" id="JoI-fs-2Tf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNE-ad-jCB">
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="M06-xv-ZaO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutBtn_Clicked:" destination="MDx-cc-AhK" eventType="touchUpInside" id="HdB-An-BWs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YXk-sP-6Xr" firstAttribute="centerX" secondItem="Bp6-cp-ThT" secondAttribute="centerX" id="1kV-yq-Jpy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dNE-ad-jCB" secondAttribute="trailing" constant="15" id="7IJ-pe-oeT"/>
+                            <constraint firstItem="YXk-sP-6Xr" firstAttribute="top" secondItem="sIQ-IN-1te" secondAttribute="bottom" constant="-27" id="Bms-mL-VbY"/>
+                            <constraint firstItem="dNE-ad-jCB" firstAttribute="leading" secondItem="Bp6-cp-ThT" secondAttribute="leadingMargin" constant="14" id="Fj8-Bf-73t"/>
+                            <constraint firstItem="dNE-ad-jCB" firstAttribute="top" secondItem="YXk-sP-6Xr" secondAttribute="bottom" constant="28.5" id="R1u-DK-AVL"/>
+                            <constraint firstItem="sIQ-IN-1te" firstAttribute="centerX" secondItem="Bp6-cp-ThT" secondAttribute="centerX" id="oKF-eP-q99"/>
+                            <constraint firstItem="YXk-sP-6Xr" firstAttribute="centerY" secondItem="Bp6-cp-ThT" secondAttribute="centerY" id="vgJ-NL-be5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="logoutBtn" destination="dNE-ad-jCB" id="WfX-U3-rM1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dBe-9c-tMq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3804" y="131.78410794602701"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MNH-bk-FMW">
+            <objects>
+                <navigationController wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" id="wCe-dC-u2B" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3az-ql-eCH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mBO-7u-CHk" kind="relationship" relationship="rootViewController" id="xfI-1m-DYp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pe9-75-kEK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1064.8" y="131.78410794602701"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="app_logo.png" width="100" height="140"/>
+        <image name="backgroung.png" width="400" height="310"/>
+    </resources>
+</document>
